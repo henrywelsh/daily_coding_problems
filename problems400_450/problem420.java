@@ -4,7 +4,7 @@ public class problem420 {
         System.out.println(perfectNumber(2));
     }
 
-    public int perfectNumber(int n) {
+    public static int perfectNumber(int n) {
         int perfectNumber = 18;
 
         while (n > 0) {
@@ -16,13 +16,13 @@ public class problem420 {
         return perfectNumber;
     }
 
-    private boolean isAPerfectNumber(int perfectNumber) {
-        String perfectNumberString = String.parseInt(perfectNumber);
+    private static boolean isAPerfectNumber(int perfectNumber) {
         int sum = 0;
-        for (String s : perfectNumberString.split("")) {
-            sum += Integer.parseInt(s);
+        while (perfectNumber > 0) {
+            sum += perfectNumber % 10;
+            perfectNumber /= 10;
         }
-        return 10.equals(sum);
+        return 10 == sum;
     }
 
 }
