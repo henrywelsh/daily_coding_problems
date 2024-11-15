@@ -14,7 +14,7 @@ public class problem422 {
 
     }
 
-    public static Node mergeTrees(Node tree1, Node tree2) {
+    public Node mergeTrees(Node tree1, Node tree2) {
         if (tree1 == null) {
             return tree2;
         } else if (tree2 == null) {
@@ -26,7 +26,7 @@ public class problem422 {
     }
 
 
-    public static class Node {
+    public class Node {
         private Node left;
         private Node right;
         private int value;
